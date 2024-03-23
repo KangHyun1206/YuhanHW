@@ -1,13 +1,3 @@
-// var canvas = document.getElementById("myCanvas");
-// var context = canvas.getContext("2d");
-
-
-
-// context.beginPath();
-// context.strokeStyle="black";
-// context.arc(250,250,200,0,Math.PI*2);
-// context.stroke();
-
 function circle1()
 {
     var canvas = document.getElementById("myCanvas");
