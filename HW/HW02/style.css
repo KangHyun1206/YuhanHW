@@ -1,0 +1,124 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    
+}
+#allview
+{
+    width: 100%;
+    height: 56.25vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+#d_Top
+{
+    width: 100%;
+    height: 11.11%;
+    display: flex;
+    flex-basis: auto;
+    justify-content: end;
+    align-items: center;
+    background-color: aqua;
+    color: aquamarine;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#student_id
+{
+    color: rgb(241, 55, 217);
+    font-size: 25px;
+}
+#student_name
+{
+    color: blue;
+    font-size: 35px;
+}
+#d_Left
+{
+    width: 20%;
+    height: 88.89%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: aquamarine;
+}
+#bt01
+{
+    margin: 8px;
+    padding: 8px;
+    width: 70%;
+    height: 15%;
+    background-color: coral;
+    color: darkcyan;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bt02
+{
+    margin: 8px;
+    padding: 8px;
+    width: 70%;
+    height: 15%;
+    background-color: coral;
+    color: darkcyan;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#d_Right
+{
+    width: 80%;
+    height: 88.89%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: brown;
+}
+#firstview
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: darkcyan;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#canvasview
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+#gameItd
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+#gameImgSection
+{
+    width: 20%;
+    height: 100%;
+}
+#gameImg
+{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#instructionSection
+{
+    display: none;
+    width: 80%;
+    height: 100%;
+}
