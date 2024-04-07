@@ -19,7 +19,7 @@ function draw()
 
     sunSelfAngle += Math.PI/100;
 
-    earthAngle += Math.PI/200;
+    earthAngle -= Math.PI/200;
     earthSelfAngle += Math.PI/150;
     
     moonAngle += Math.PI/100;
