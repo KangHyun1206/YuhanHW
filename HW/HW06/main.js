@@ -5,16 +5,16 @@ var mouseY = canvas.height/2;
 var heartSizeRange = { min: 5, max: 20 };
 var colors = ["red", "black", "blue", "magenta", "pink", "cyan", "orange"];
 
-class HeartObject {
+class HeartObject { //하트 오브젝트 클래스
     constructor() {
-        this.colors = colors[Math.floor(Math.random() * colors.length)];
-        this.radius = Math.random() * (heartSizeRange.max - heartSizeRange.min) + heartSizeRange.min;
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.speed = Math.random() * 2 + 1; // Speed range: 1 to 3
-        this.angle = Math.random() * Math.PI * 2;
-        this.rotateSpeed = Math.random() * 0.5; // Rotate speed range: -0.01 to 0.01
-        this.moveDirection = Math.random() < 0.5 ? -1 : 1;
+        this.colors = colors[Math.floor(Math.random() * colors.length)]; //컬러
+        this.radius = Math.random() * (heartSizeRange.max - heartSizeRange.min) + heartSizeRange.min; //하트 크기
+        this.x = Math.random() * canvas.width; //x좌표
+        this.y = Math.random() * canvas.height; //y좌표
+        this.speed = Math.random() * 2 + 1; //속도
+        this.angle = Math.random() * Math.PI * 2; //객체 앵글
+        this.rotateSpeed = Math.random() * 0.5; //회전 속도
+        this.moveDirection = Math.random() < 0.5 ? -1 : 1; //이동 방향
     }
 
     draw() {
@@ -66,7 +66,7 @@ class HeartObject {
         this.x += dx * (speed / distance);
         this.y += dy * (speed / distance);
 
-        this.angle += this.rotateSpeed;
+        this.angle += this.rotateSpeed; //회전 넣기
         
         if (this.x > canvas.width) {
             this.x = 0;
@@ -81,8 +81,8 @@ class HeartObject {
     }
 }
 
-var hearts = [];
-function createHeart() {
+var hearts = []; //객체 배열 선언
+function createHeart() { //하트 객체 생성(100개 넘으면 오래된 순 삭제)
     var heart = new HeartObject();
     hearts.push(heart);
     if (hearts.length > 100) {
@@ -90,19 +90,20 @@ function createHeart() {
     }
 }
 
-canvas.addEventListener("mousemove", function(event) {
+canvas.addEventListener("mousemove", function(event) { //마우스 이동 이벤트
     mouseX = event.clientX;
     mouseY = event.clientY;
 });
 
-setInterval(createHeart, 200); // Creates a heart every 0.2 seconds
+setInterval(createHeart, 200); //0.2초마다 하트 생성
 
-function animate() {
+function animate() { //애니메이션 출력
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for(var i = 0; i < hearts.length; i++){
         hearts[i].update();
         hearts[i].draw();
+        hearts[i].angle += hearts[i].rotateSpeed;
     }
 }
-animate();
+animate(); //재생
