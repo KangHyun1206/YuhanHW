@@ -2,26 +2,6 @@ var canvas = document.getElementById("TestCanvas");
 var ctx = canvas.getContext("2d");
 var centerx = canvas.width/2;
 var centery = canvas.height/2;
- // 파란 배경 그리기
- ctx.fillStyle = "#007bff"; // 파란색
- ctx.fillRect(0, 0, canvas.width, canvas.height);
-
- // 시작 버튼 클릭 이벤트
- var startButton = document.getElementById("startButton");
- startButton.addEventListener("click", function() {
-     // 별과 하트 화면으로 넘어가기
-     drawStarAndHeart();
-
-     // 시작 버튼 숨기기
-     startButton.style.display = "none";
- });
-
- // 별과 하트 그리기
- function drawStarAndHeart() {
-     // 클릭 시 별과 하트를 그리는 함수 호출
-     drawStar(ctx);
-     drawHeart(ctx);
- }
 
 ctx.translate(centerx,centery);
 
