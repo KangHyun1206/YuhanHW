@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(72, 153, 242);
+    display: flex;
+    justify-content: center;
+}
+#TestCanvas{
+    margin-top: 50px;
+    height: 800px;
+    width: 480px;
+    background-color: rgb(180, 180, 180);
+}
