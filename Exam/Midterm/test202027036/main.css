@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(72, 153, 242);
+    display: flex;
+    justify-content: center;
+}
+#TestCanvas{
+    margin-top: 50px;
+    height: 800px;
+    width: 480px;
+    background-color: rgb(180, 180, 180);
+}
+#startButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
