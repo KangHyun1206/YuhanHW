@@ -265,6 +265,7 @@ function toggleAttack() {
         targetScale = 3;
         attacking = true;
         attackValue -= 1;
+        setTimeout(originalState, 3000); // 공격 상태 복귀 타이머를 이곳으로 이동
     } 
 }
 function originalState(){
@@ -289,6 +290,9 @@ function initializeGame() {
     attackValue = 3;
     starRange.x = canvas.width / 2;
     starRange.y = canvas.height / 2;
+    hitNum = 0;
+    num1 = hitNum.toString(); // num1 업데이트
+    sn = num1.split('').map(Number); // sn 업데이트
     keys = {};
     enemys = [];
     enemySave = [];
@@ -484,7 +488,6 @@ function handleKeyDown(event){
     keys[event.key] = true;
     if (event.key === 'Enter' && gameRunning && attackValue >= 1) {
         toggleAttack();
-        setTimeout(originalState,3000);
     }
 }
 function handleKeyUp(event){
